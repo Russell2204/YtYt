@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  outline: none;
+  font-family: Gilroy;
+  font-weight: 400;
+}
+$Gilroy: ('Bold', 700),('Heavy', 900),('Medium', 500),('Regular', 400),('SemiBold', 600),('SemiBoldItalic', 600);
+@each $name, $weight in $Gilroy {
+  @font-face {
+    font-family: Gilroy;
+    src: url("@/assets/fonts/Gilroy-#{$name}.woff2");
+    font-weight: $weight;
+  }
+}
+.container{
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+}
+
