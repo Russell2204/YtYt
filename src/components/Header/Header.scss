@@ -1,6 +1,9 @@
 .header {
     background: #f9f8fd;
     padding-top: 12px;
+    height: 820px;
+    display: flex;
+    flex-direction: column;
     &-nav {
         display: flex;
         justify-content: space-between;
@@ -34,28 +37,151 @@
                     color: white;
                     display: flex;
                     position: relative;
-                    &::before{
-                        content: url('@/assets/images/Nav/arrow.svg');
+                    &::before {
+                        content: url("@/assets/images/Nav/arrow.svg");
                         display: block;
                         position: absolute;
                         left: 10px;
-                        
                     }
-                    &:hover::before{
+                    &:hover::before {
                         animation: slide 1s infinite;
                     }
                 }
             }
         }
     }
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+        &-left {
+            max-width: 638px;
+            h1 {
+                color: #22253b;
+                font-size: 46px;
+                font-weight: 500;
+                line-height: 100%;
+                margin-bottom: 45px;
+                span {
+                    color: #22253b;
+                    font-weight: 700;
+                    font-style: italic;
+                    &::after {
+                        content: "}";
+                        color: #f15525;
+                        font-size: 46px;
+                        font-weight: 500;
+                        font-style: normal;
+                    }
+                    &::before {
+                        content: "{";
+                        font-style: normal;
+                        color: #f15525;
+                        font-size: 46px;
+                        font-weight: 500;
+                    }
+                }
+                &::after {
+                    content: "";
+                    width: 365px;
+                    height: 1px;
+                    display: block;
+                    background: #dedede;
+                    margin-top: 31px;
+                }
+            }
+            p {
+                color: #22253b;
+                font-weight: 400;
+                line-height: 23px;
+                max-width: 365px;
+                margin-bottom: 18px;
+            }
+            a {
+                padding: 27px 45px;
+                border-radius: 82px;
+                background: #f15525;
+                color: #fff;
+                font-size: 20px;
+                line-height: 96.688%; /* 19.338px */
+                letter-spacing: -0.6px;
+                display: block;
+                width: max-content;
+                &::after{
+                    content: url('@/assets/images/HeaderContent/arrowup.svg');
+                    margin-left: 12px;
+                    display: inline-block;
+                    transform: translateX(5px);
+                }
+                &:hover::after{
+                animation: slideUp 1s infinite;
+
+                }                    
+            }
+        }
+    }
+}
+.monitor{
+    background: url('@/assets/images/HeaderContent/monitor.svg');
+    width: 390px;
+    height: 173px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .chat{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 3px;
+        left: 10px;
+        align-items: flex-end;
+        gap: 2.8px;
+        img{
+
+        }
+    }
+
+    .window{
+        position: absolute;
+        background: url('@/assets/images/HeaderContent/border.svg');
+        width: 270px;
+        height: 96px;
+        top: 27px;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-inside{
+            position: absolute;
+            background: url('@/assets/images/HeaderContent/inside.svg');
+            width: 255px;
+            height: 80px;
+            top: 13px;
+        }
+       
+    }
 }
 @keyframes slide {
     0% {
         transform: translateX(0px);
-    }50%{
+    }
+    50% {
         transform: translateX(3px);
-    }100%{
+    }
+    100% {
         transform: translateX(0px);
-
+    }
+}
+@keyframes slideUp {
+    0% {
+        transform: translateX(0px) translateY(5px);
+    }
+    50% {
+        transform: translateX(8px) translateY(-5px);
+    }
+    100% {
+        transform: translateX(0px) translateY(5px);
     }
 }
