@@ -1,7 +1,7 @@
 
-
+const text = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23'];
+const marks = ['1','2','3','4','5','6','7','8','9']
 const Content = () => {
-const chat = ['1','2','4','5','6','7','8','9','10','11','12','13','14']
 
 return (
     <div className="container header-content">
@@ -21,18 +21,26 @@ return (
           <div className="window">
             <div className="window-inside">
             <div className="chat">
-              {chat.map((img, idx) => (
-                 <img key={idx} src={`images/chat/${img}.svg`} alt="" />
-              ))}
+                 <img src='images/chat/all.svg' alt="" />
             </div>
             <div className="scroll">
-              <img src="" alt="" />
+              <img src="images/scroll.svg" alt="" />
             </div>
             <div className="text">
-              <img src="" alt="" />
+              {text.map((txt)=>(
+                <img key={txt} src={`images/text/${txt}.svg`} alt="" />
+              ))}
             </div>
             </div>
           </div>
+        </div>
+        <div className="keyboard">
+          <img src="images/keyboard/keyboard.svg" alt="" />
+          {marks.map((mark)=>(
+            <img key={mark} src={`images/keyboard/${mark}.svg`} alt="" className="mark" />
+          ))}
+          <img src="images/keyboard/leftHand.svg" alt="" className="hand left" />
+          <img src="images/keyboard/rightHand.svg" alt="" className="hand right" />
         </div>
       </div>
     </div>
