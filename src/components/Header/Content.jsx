@@ -1,6 +1,7 @@
 
 const text = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23'];
 const marks = ['1','2','3','4','5','6','7','8','9']
+const circles = ['1','2','3','4','5']
 const Content = () => {
 
 return (
@@ -33,6 +34,11 @@ return (
             </div>
             </div>
           </div>
+        </div>
+        <div className="circles">
+          {circles.map((el) => (
+            <img key={el} src={`images/e${el}.svg`} alt="" />
+          ))}
         </div>
         <div className="keyboard">
           <img src="images/keyboard/keyboard.svg" alt="" />

@@ -1,0 +1,32 @@
+<svg width="827.103516" height="827.103394" viewBox="0 0 827.104 827.103" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_9_267_dd" x="0.000000" y="0.000000" width="827.103516" height="827.103394" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feGaussianBlur in="BackgroundImage" stdDeviation="20"/>
+			<feComposite in2="SourceAlpha" operator="in" result="effect_backgroundBlur_1"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="30"/>
+			<feGaussianBlur stdDeviation="33.3333"/>
+			<feComposite in2="hardAlpha" operator="out" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.50588 0 0 0 0 0.66667 0 0 0 0.059 0"/>
+			<feBlend mode="normal" in2="effect_backgroundBlur_1" result="effect_dropShadow_2"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_dropShadow_2" result="shape"/>
+		</filter>
+		<linearGradient id="paint_linear_9_267_0" x1="766.692871" y1="-1066.625000" x2="324.078857" y2="1478.676758" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFFFFF"/>
+			<stop offset="1.000000" stop-color="#FFFFFF" stop-opacity="0.000000"/>
+		</linearGradient>
+		<linearGradient id="paint_linear_9_267_1" x1="564.389221" y1="-98.303497" x2="413.551880" y2="697.103394" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFFFFF"/>
+			<stop offset="1.000000" stop-color="#FFFFFF" stop-opacity="0.000000"/>
+		</linearGradient>
+	</defs>
+	<g filter="url(#filter_9_267_dd)">
+		<circle id="Ellipse 32" cx="413.551758" cy="383.551697" r="313.551697" fill="#FFFFFF" fill-opacity="0.300000"/>
+		<circle id="Ellipse 32" cx="413.551758" cy="383.551697" r="313.551697" fill="url(#paint_linear_9_267_0)" fill-opacity="1.000000"/>
+	</g>
+	<circle id="Ellipse 32" cx="413.551758" cy="383.551697" r="312.551697" stroke="url(#paint_linear_9_267_1)" stroke-opacity="1.000000" stroke-width="2.000000"/>
+</svg>
