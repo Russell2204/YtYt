@@ -9,13 +9,13 @@
   font-family: Gilroy;
   font-weight: 400;
 }
-@mixin media($size){
+@mixin media($size) {
   @media (max-width: #{$size}px) {
     @content;
   }
 }
 
-$Gilroy: ('Bold', 700),('Heavy', 900),('Medium', 500),('Regular', 400),('SemiBold', 600),('SemiBoldItalic', 600);
+$Gilroy: ("Bold", 700), ("Heavy", 900), ("Medium", 500), ("Regular", 400), ("SemiBold", 600), ("SemiBoldItalic", 600);
 @each $name, $weight in $Gilroy {
   @font-face {
     font-family: Gilroy;
@@ -23,13 +23,15 @@ $Gilroy: ('Bold', 700),('Heavy', 900),('Medium', 500),('Regular', 400),('SemiBol
     font-weight: $weight;
   }
 }
-.container{
+.container {
   max-width: 1160px;
   width: 100%;
   margin: 0 auto;
-  @include media(900) {
+  @include media(1140) {
     padding: 0 15px;
   }
+  @include media(500) {
+    padding: 0;
+  }
 }
-@import '@/components/Header/Header.scss';
-
+@import "@/components/Header/Header.scss";

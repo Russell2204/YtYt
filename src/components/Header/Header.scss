@@ -7,9 +7,16 @@
     overflow: hidden;
     position: relative;
     z-index: 99999;
-    @include media(900) {
-        padding: 12px 15px 0 !important;
+    @include media(1140) {
+        padding: 12px 15px 0;
     }
+    @include media(900) {
+        height: 935px;
+    }
+    @include media(500) {
+        padding: 10px 0 0 0;
+    }
+
     &-nav {
         display: flex;
         justify-content: space-between;
@@ -20,8 +27,13 @@
         backdrop-filter: blur(7.5px);
         position: relative;
         z-index: 99999;
+
         @include media(900) {
             background: white;
+        }
+        @include media(464) {
+            background: white;
+            width: 430px;
         }
         .burger {
             background: none;
@@ -33,11 +45,11 @@
                 order: 2;
             }
         }
-        .close{
+        .close {
             background: none;
             display: none;
             visibility: hidden;
-            @include media(900){
+            @include media(900) {
                 display: block;
                 visibility: visible;
                 position: absolute;
@@ -80,7 +92,6 @@
             }
             &.active {
                 transform: translateX(0);
-
             }
             a {
                 color: #22253b;
@@ -143,18 +154,45 @@
         flex-grow: 1;
         position: relative;
         z-index: 9999;
+        @include media(500) {
+            overflow: hidden;
+        }
+        @include media(850) {
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: column;
+        }
         &-left {
             max-width: 638px;
             position: relative;
             z-index: 9999;
             animation: parallaxLeft 5s both ease-in-out;
-
+            @include media(500) {
+                animation: parallaxTop 5s both ease-in-out;
+            }
+            @include media(850) {
+                max-width: 400px;
+                margin-bottom: 30px;
+            }
+            @include media(850) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
             h1 {
                 color: #22253b;
                 font-size: 46px;
                 font-weight: 500;
                 line-height: 100%;
                 margin-bottom: 45px;
+                @include media(850) {
+                    margin-bottom: 10px;
+                    font-size: 33px !important;
+                }
+                @include media(900) {
+                    font-size: 28px;
+                }
                 span {
                     color: #22253b;
                     font-weight: 700;
@@ -181,6 +219,10 @@
                     display: block;
                     background: #dedede;
                     margin-top: 31px;
+                    @include media(850) {
+                        text-align: center;
+                        margin: 30px auto 0;
+                    }
                 }
             }
             p {
@@ -219,6 +261,17 @@
             position: relative;
             // animation: parallaxRight 1s both;
         }
+    }
+}
+@keyframes parallaxTop {
+    0% {
+        transform: translateY(-150%);
+    }
+    50% {
+        transform: translateY(10%);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
 @keyframes parallaxLeft {
@@ -485,6 +538,11 @@
     left: 0;
     height: 100%;
     width: 100%;
+    @include media(900) {
+        top: 7%;
+        left: 15%;
+        width: 70%;
+    }
     img {
         position: absolute;
         display: block;
