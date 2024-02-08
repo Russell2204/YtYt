@@ -1,0 +1,14 @@
+.main {
+    background: white;
+
+    &-title {
+        color: rgb(34, 37, 59);
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 46px;
+        text-align: center;
+        margin: 88px 0 35px;
+    }
+}
+
+@import url(./studying/Studying.scss);
