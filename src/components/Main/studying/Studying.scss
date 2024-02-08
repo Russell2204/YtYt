@@ -1,0 +1,97 @@
+.studying {
+    margin-bottom: 84px;
+
+    &-content {
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-radius: 48px;
+        background: rgb(234, 242, 245);
+        &-skills {
+            max-width: 466px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding-bottom: 86px;
+            padding-top: 78px;
+            li {
+                padding: 11px 18px;
+                font-size: 17px;
+                color: white;
+                border-radius: 44px;
+                &:last-of-type {
+                    padding: 11px 35px;
+                }
+            }
+            p {
+                color: rgb(34, 37, 59);
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 25px;
+                text-align: left;
+                margin-top: 26px;
+                width: 386px;
+            }
+        }
+        &-image {
+            position: relative;
+            z-index: 1;
+            img {
+                position: absolute;
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3) {
+                    bottom: 0;
+                    left: 122px;
+                }
+                &:nth-child(1) {
+                    transform: translateY(-236%);
+                    animation: table 0.3s both ease-in-out;
+                }
+                &:nth-child(2) {
+                    left: 360px;
+                    z-index: -1;
+                }
+                &:nth-child(3) {
+                    z-index: -1;
+                    left: 160px;
+                    transform: translateX(-190%);
+                    animation: chelik 1s both ease-in-out;
+                }
+                &:nth-child(4) {
+                    bottom: 168px;
+                    transform: translateY(-460%);
+                    left: 270px;
+
+                    animation: nout 0.8s both ease-in-out;
+                }
+            }
+        }
+    }
+}
+@keyframes table {
+    from {
+        transform: translateY(-236%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+@keyframes chelik {
+    from {
+        transform: translateX(-236%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+@keyframes nout {
+    from {
+        transform: translateY(-460%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
