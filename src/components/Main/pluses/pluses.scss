@@ -1,0 +1,25 @@
+.pluses {
+    margin-bottom: 120px !important;
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1161px;
+        width: 100%;
+        gap: 27px;
+
+        &-card {
+            width: 270px;
+            padding: 50px 35px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+            border-radius: 30px;
+
+            background: rgb(234, 242, 245);
+        }
+    }
+}
